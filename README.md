@@ -3,25 +3,27 @@
 ## Running the test
 
 ### Prerequisites
+
+Make sure you have the following installed:
 * [docker](https://docs.docker.com/v17.09/engine/installation/)
 * [docker-compose](https://docs.docker.com/compose/install/)
 
 ### Starting up the container
-To start up the container:
+To start up the container, from the root of the repo, run the following command:
 ````bash
 make
 ````
 
 Once up and running, it will stream logs from the app.  You can use CTL+C to get out of it.
 
-To start the container without viewing logs:
+To start the container without viewing logs, from the root of the repo, run the following command:
 ````bash
 make up
 ````
 
 Once up, the API will be available at http://0.0.0.0:5000
 
-To stop the container:
+To stop the container, from the root of the repo, run the following command:
 ````bash
 make down
 ````
@@ -32,13 +34,13 @@ make down
 
 You can run the automated test scripts (there's only a couple, it's a demo) by following these steps:
 
-Entering the app container:
+1.  Enter the app container by running the following command from the root of the repo:
 ````bash
 make enter
 ````
 and enter "app" when prompted.
 
-Then issue the following command to run the robot tests:
+2.  Issue the following command to run the robot tests:
 ````bash
 tests/acceptance/robot.sh
 ````
