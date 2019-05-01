@@ -1,0 +1,23 @@
+# Python cache
+__pycache__
+src/api/__pycache__
+
+.DS_Store
+
+# Bytecode from python
+*.pyc
+
+# Vim tmp files
+*.swp
+
+# History file
+.bash_history
+
+# Robot framework test results
+log.html
+output.xml
+report.html
+tests/acceptance/results
+log.html
+report.html
+output.xml

@@ -1,0 +1,1 @@
+robot --outputdir tests/acceptance/results/ tests/acceptance/

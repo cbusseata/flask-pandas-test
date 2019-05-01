@@ -1,0 +1,123 @@
+{
+	"info": {
+		"_postman_id": "a7b3a6d6-e839-441f-9e3f-b7d7312e8dd4",
+		"name": "TreeTop-Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Organization",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://0.0.0.0:5000/organization/1",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "5000",
+					"path": [
+						"organization",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://0.0.0.0:5000/test",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "5000",
+					"path": [
+						"test"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Organizations",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://0.0.0.0:5000/organizations?orderby=city&direction=DSC",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "5000",
+					"path": [
+						"organizations"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "123",
+							"disabled": true
+						},
+						{
+							"key": "orderby",
+							"value": "city"
+						},
+						{
+							"key": "direction",
+							"value": "DSC"
+						},
+						{
+							"key": "city",
+							"value": "winter haven",
+							"disabled": true
+						},
+						{
+							"key": "state",
+							"value": "FL",
+							"disabled": true
+						},
+						{
+							"key": "postal",
+							"value": "33880",
+							"disabled": true
+						},
+						{
+							"key": "name",
+							"value": "Cobb Theatres",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

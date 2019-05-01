@@ -1,0 +1,18 @@
+version: "3"
+
+services:
+  app:
+    container_name: treetop_app
+    build:
+      context: ../../
+      dockerfile: ops/docker/app/app.docker
+    volumes:
+      - ../../:/app/
+    ports:
+      - "5000:5000"
+    networks:
+      app-env:
+    tty: true
+
+networks:
+  app-env:
