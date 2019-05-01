@@ -66,3 +66,4 @@ Note that the accepted parameter names are the same as in the instruction sheet,
 6.  Consider using the CSV to seed a database, rather than just accessing it directly.
 7.  Deploy to AWS.
 8.  Secure the API with an API key or an IP whitelist, or both.
+9.  Add a make command for executing tests
