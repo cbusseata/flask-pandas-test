@@ -1,6 +1,6 @@
 import os
 from pathlib import Path
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request, escape
 import jsonschema
 import requestschema
 import math
@@ -40,9 +40,9 @@ def get_organizations():
     # Filter
     for field in ['id', 'name', 'city', 'state', 'postal']:
         if request.args.get(field):
-            organizationsDf = organizationsDf.loc[organizationsDf[field] == request.args.get(field)]
+            organizationsDf = organizationsDf.loc[organizationsDf[field] == escape(request.args.get(field))]
 
-    order_by = request.args.get('orderby')
+    order_by = escape(request.args.get('orderby'))
     ascending = False if request.args.get('direction') and request.args.get('direction') == 'DSC' else True
     if order_by:
         organizationsDf = organizationsDf.sort_values(by=[order_by], ascending=ascending)
@@ -50,7 +50,7 @@ def get_organizations():
     if organizationsDf.shape[0] <= 0:
         return jsonify({'error': 'No results'}), 404
 
-    return jsonify(fix_up_response_dict_list(organizationsDf.to_dict(orient = 'records'))), 200
+    return jsonify({'organizations': fix_up_response_dict_list(organizationsDf.to_dict(orient = 'records'))}), 200
 
 def get_organizations_dataframe():
     """Gets a pandas DataFrame object to work with from the CSV.
